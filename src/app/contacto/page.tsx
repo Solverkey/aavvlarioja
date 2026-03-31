@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 export const metadata = {
   title: "Contacto | Federación de AAVV de La Rioja",
@@ -115,82 +116,7 @@ export default function Contacto() {
 
             {/* Formulario */}
             <div className="lg:col-span-3">
-              <div className="bg-bg-light rounded-2xl p-8 border border-border">
-                <h2 className="text-2xl font-bold text-text-dark mb-6">
-                  Envíanos un mensaje
-                </h2>
-                <form className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium text-text-dark mb-1.5"
-                      >
-                        Nombre
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="w-full px-4 py-3 rounded-xl border border-border bg-white text-text-dark placeholder-text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all"
-                        placeholder="Tu nombre"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-text-dark mb-1.5"
-                      >
-                        Correo electrónico
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="w-full px-4 py-3 rounded-xl border border-border bg-white text-text-dark placeholder-text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all"
-                        placeholder="tu@email.com"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium text-text-dark mb-1.5"
-                    >
-                      Asunto
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      className="w-full px-4 py-3 rounded-xl border border-border bg-white text-text-dark placeholder-text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all"
-                      placeholder="¿En qué podemos ayudarte?"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-text-dark mb-1.5"
-                    >
-                      Mensaje
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-xl border border-border bg-white text-text-dark placeholder-text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all resize-none"
-                      placeholder="Escribe tu mensaje aquí..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
-                  >
-                    <Send size={18} />
-                    Enviar mensaje
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
           </div>
 
