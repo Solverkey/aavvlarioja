@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -19,9 +20,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg gradient-accent flex items-center justify-center text-white font-bold text-lg shadow-md">
-              FV
-            </div>
+            <Image
+              src="/images/Logo-AAVV-2.svg"
+              alt="Logo Federación AAVV La Rioja"
+              width={40}
+              height={40}
+              className="w-10 h-10 object-contain"
+            />
             <div className="hidden sm:block">
               <p className="text-sm font-bold text-primary leading-tight">
                 Federación de Asociaciones

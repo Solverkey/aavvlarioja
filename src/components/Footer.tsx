@@ -9,9 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-white font-bold text-lg">
-                FV
-              </div>
+              <Image
+                src="/images/Logo-AAVV-2.svg"
+                alt="Logo Federación AAVV La Rioja"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain brightness-0 invert"
+              />
               <div>
                 <p className="text-sm font-bold leading-tight">Federación de Asociaciones</p>
                 <p className="text-sm font-bold leading-tight">Vecinales de La Rioja</p>
@@ -70,22 +74,22 @@ export default function Footer() {
               Con el apoyo de
             </h3>
             <div className="space-y-4">
-              <div className="bg-white rounded-lg p-3 inline-block">
+              <div className="bg-white rounded-lg p-4 inline-block">
                 <Image
                   src="/images/logo-larioja.png"
                   alt="Gobierno de La Rioja"
-                  width={180}
-                  height={60}
-                  className="h-12 w-auto"
+                  width={360}
+                  height={120}
+                  className="h-16 w-auto"
                 />
               </div>
-              <div className="bg-white rounded-lg p-3 inline-block">
+              <div className="bg-white rounded-lg p-4 inline-block">
                 <Image
                   src="/images/logo-ministerio.png"
                   alt="Ministerio de Derechos Sociales, Consumo y Agenda 2030"
-                  width={220}
-                  height={80}
-                  className="h-16 w-auto"
+                  width={440}
+                  height={160}
+                  className="h-20 w-auto"
                 />
               </div>
             </div>
@@ -98,13 +102,13 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Federación de Asociaciones Vecinales de La Rioja
             </p>
             <div className="flex gap-6">
-              <Link href="#" className="text-xs text-white/50 hover:text-white/80 transition-colors">
+              <Link href="/aviso-legal" className="text-xs text-white/50 hover:text-white/80 transition-colors">
                 Aviso Legal
               </Link>
-              <Link href="#" className="text-xs text-white/50 hover:text-white/80 transition-colors">
+              <Link href="/politica-de-privacidad" className="text-xs text-white/50 hover:text-white/80 transition-colors">
                 Política de Privacidad
               </Link>
-              <Link href="#" className="text-xs text-white/50 hover:text-white/80 transition-colors">
+              <Link href="/politica-de-cookies" className="text-xs text-white/50 hover:text-white/80 transition-colors">
                 Política de Cookies
               </Link>
             </div>

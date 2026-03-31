@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Phone,
@@ -11,6 +12,7 @@ import {
   Vote,
   History,
 } from "lucide-react";
+import PresupuestosAccordion from "@/components/PresupuestosAccordion";
 
 function InstagramIcon({ size = 24 }: { size?: number }) {
   return (
@@ -36,11 +38,15 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="gradient-hero text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-warm rounded-full blur-3xl" />
-        </div>
+      <section className="relative text-white overflow-hidden">
+        <Image
+          src="/images/logrono-cabecera.jpg"
+          alt="Logroño"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-primary/80" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm mb-6">
@@ -113,7 +119,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <a
-              href="https://www.instagram.com/aavvlarioja/"
+              href="https://www.instagram.com/fvecinalesrioja/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-semibold px-8 py-4 rounded-2xl hover:opacity-90 transition-opacity shadow-lg"
@@ -130,60 +136,70 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 md:p-12 border border-purple-100">
-            <div className="flex flex-col lg:flex-row gap-8 items-start">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-2xl bg-purple-600 flex items-center justify-center shadow-lg">
-                  <Shield size={32} className="text-white" />
-                </div>
+            <a
+              href="https://redvecinal.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mb-6"
+            >
+              <Image
+                src="/images/Red-Vecinal_1.svg"
+                alt="Red Vecinal contra la Violencia de Género"
+                width={280}
+                height={80}
+                className="h-14 w-auto"
+              />
+            </a>
+
+            <p className="text-text-muted leading-relaxed mb-4">
+              La Red Vecinal contra la Violencia de Género es un programa de
+              la Federación de Asociaciones Vecinales de La Rioja y el
+              Gobierno de La Rioja que ofrece acompañamientos, traslados y
+              apoyos a personas en situación de maltrato. Actúa en toda La
+              Rioja gracias a la colaboración anónima de personas voluntarias.
+            </p>
+            <p className="text-text-muted leading-relaxed mb-4">
+              También se organizan y realizan grupos de apoyo mutuo,
+              autoayuda y autonomía de vida para mujeres, asimismo realizan
+              diferentes actuaciones con el objetivo de concienciar,
+              sensibilizar y formar en materia de igualdad y en violencia de
+              género.
+            </p>
+            <p className="text-text-muted leading-relaxed mb-8">
+              Actualmente la Red Vecinal contra la Violencia de Género tiene
+              Puntos de Información en{" "}
+              <strong>
+                Logroño, Nájera, Arnedo, Alfaro y Calahorra
+              </strong>
+              .
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white rounded-xl p-5 border border-purple-100">
+                <p className="text-sm font-semibold text-purple-700 mb-1">
+                  Coordinadora
+                </p>
+                <p className="font-bold text-text-dark">
+                  Nuria Lázaro Somalo
+                </p>
               </div>
-              <div className="flex-1">
-                <h2 className="text-2xl md:text-3xl font-bold text-text-dark mb-4">
-                  Red Vecinal contra la Violencia de Género
-                </h2>
-                <p className="text-text-muted leading-relaxed mb-4">
-                  La Red Vecinal contra la Violencia de Género es un programa de
-                  la Federación de Asociaciones Vecinales de La Rioja y el
-                  Gobierno de La Rioja que ofrece acompañamientos, traslados y
-                  apoyos a personas en situación de maltrato. Actúa en toda La
-                  Rioja gracias a la colaboración anónima de personas
-                  voluntarias.
+              <div className="bg-white rounded-xl p-5 border border-purple-100 flex flex-col gap-3">
+                <p className="text-sm font-semibold text-purple-700 mb-0">
+                  Teléfonos de contacto
                 </p>
-                <p className="text-text-muted leading-relaxed mb-4">
-                  También se organizan y realizan grupos de apoyo mutuo,
-                  autoayuda y autonomía de vida para mujeres, asimismo realizan
-                  diferentes actuaciones con el objetivo de concienciar,
-                  sensibilizar y formar en materia de igualdad y en violencia de
-                  género.
-                </p>
-                <p className="text-text-muted leading-relaxed mb-6">
-                  Actualmente la Red Vecinal contra la Violencia de Género tiene
-                  Puntos de Información en{" "}
-                  <strong>
-                    Logroño, Nájera, Arnedo, Alfaro y Calahorra
-                  </strong>
-                  .
-                </p>
-                <div className="bg-white rounded-xl p-5 border border-purple-100 mb-6">
-                  <p className="text-sm font-semibold text-purple-700 mb-1">
-                    Coordinadora
-                  </p>
-                  <p className="font-bold text-text-dark">
-                    Nuria Lázaro Somalo
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-3">
                   <a
                     href="tel:941244902"
-                    className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-3 rounded-xl transition-colors"
+                    className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-4 py-2.5 rounded-xl transition-colors text-sm"
                   >
-                    <Phone size={18} />
+                    <Phone size={16} />
                     941 244 902
                   </a>
                   <a
                     href="tel:636759083"
-                    className="inline-flex items-center gap-2 bg-purple-100 hover:bg-purple-200 text-purple-700 font-semibold px-5 py-3 rounded-xl transition-colors"
+                    className="inline-flex items-center gap-2 bg-purple-100 hover:bg-purple-200 text-purple-700 font-semibold px-4 py-2.5 rounded-xl transition-colors text-sm"
                   >
-                    <Phone size={18} />
+                    <Phone size={16} />
                     636 759 083
                   </a>
                 </div>
@@ -272,19 +288,29 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Nueva plataforma */}
-          <div className="bg-gradient-to-br from-accent/5 to-accent/15 rounded-3xl p-8 md:p-12 border border-accent/20 mb-12">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-shrink-0">
-                <div className="w-20 h-20 rounded-2xl gradient-accent flex items-center justify-center shadow-lg">
-                  <Vote size={40} className="text-white" />
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Nueva plataforma */}
+            <div className="bg-gradient-to-br from-accent/5 to-accent/15 rounded-3xl border border-accent/20 flex flex-col overflow-hidden">
+              <div className="relative w-full aspect-video">
+                <Image
+                  src="/images/participa-mockup.png"
+                  alt="Plataforma ParticipAVV"
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-text-dark mb-3">
+              <div className="p-8 md:p-10 flex flex-col flex-1">
+                <Image
+                  src="/images/participa-logo-2.png"
+                  alt="ParticipAVV"
+                  width={2797}
+                  height={447}
+                  className="h-8 w-auto mb-4 self-start"
+                />
+                <h3 className="text-2xl font-bold text-text-dark mb-3">
                   ¡Nueva plataforma de participación!
                 </h3>
-                <p className="text-text-muted leading-relaxed mb-6 text-lg">
+                <p className="text-text-muted leading-relaxed mb-6 flex-1">
                   Ahora puedes crear y votar propuestas directamente desde
                   nuestra nueva plataforma digital. Participa de forma sencilla
                   y transparente en las decisiones de tu barrio.
@@ -293,40 +319,29 @@ export default function Home() {
                   href="https://participa.aavvlarioja.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl text-lg"
+                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-6 py-3 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl self-start"
                 >
                   Ir a participa.aavvlarioja.org
-                  <ExternalLink size={20} />
+                  <ExternalLink size={18} />
                 </a>
               </div>
             </div>
-          </div>
 
-          {/* Histórico */}
-          <div className="bg-bg-light rounded-2xl p-8 border border-border">
-            <div className="flex items-center gap-3 mb-6">
-              <History size={24} className="text-text-muted" />
-              <h3 className="text-xl font-bold text-text-dark">
-                Histórico de Presupuestos Participativos
-              </h3>
-            </div>
-            <p className="text-text-muted mb-6">
-              Consulta los datos de participación y las propuestas priorizadas en
-              ediciones anteriores, organizadas por distritos: Norte, Centro,
-              Sur, Oeste y Este.
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-              {[2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014].map(
-                (year) => (
-                  <div
-                    key={year}
-                    className="bg-white border border-border rounded-xl px-4 py-3 text-center hover:border-accent/50 hover:shadow-sm transition-all"
-                  >
-                    <p className="font-bold text-text-dark">{year}</p>
-                    <p className="text-xs text-text-muted">Datos disponibles</p>
-                  </div>
-                )
-              )}
+            {/* Histórico */}
+            <div className="bg-bg-light rounded-3xl p-8 md:p-10 border border-border flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <History size={22} className="text-text-muted" />
+                <h3 className="text-xl font-bold text-text-dark">
+                  Histórico
+                </h3>
+              </div>
+              <p className="text-sm text-text-muted mb-5">
+                Consulta los datos de participación y propuestas priorizadas en
+                ediciones anteriores por distritos.
+              </p>
+              <div className="flex-1 overflow-y-auto max-h-[500px] pr-1">
+                <PresupuestosAccordion />
+              </div>
             </div>
           </div>
         </div>
@@ -407,7 +422,7 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-2xl overflow-hidden border border-border h-80 lg:h-auto">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.1!2d-2.4467!3d42.4669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5aa1d3c2a8b8b1%3A0x1234567890!2sCalle+San+Pablo+2%2C+Logro%C3%B1o!5e0!3m2!1ses!2ses!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d183.94512233236955!2d-2.4472226!3d42.4676948!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5aab38e6eaa6b1%3A0x5079b7c680a86c9c!2sFederaci%C3%B3n%20de%20Asociaciones%20Vecinales%20de%20La%20Rioja!5e0!3m2!1ses!2ses!4v1711101594203!5m2!1ses!2ses"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: 320 }}

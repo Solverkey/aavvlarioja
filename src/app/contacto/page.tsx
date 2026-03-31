@@ -197,7 +197,7 @@ export default function Contacto() {
           {/* Mapa */}
           <div className="mt-12 bg-white rounded-2xl overflow-hidden border border-border h-80">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.1!2d-2.4467!3d42.4669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5aa1d3c2a8b8b1%3A0x1234567890!2sCalle+San+Pablo+2%2C+Logro%C3%B1o!5e0!3m2!1ses!2ses!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d183.94512233236955!2d-2.4472226!3d42.4676948!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5aab38e6eaa6b1%3A0x5079b7c680a86c9c!2sFederaci%C3%B3n%20de%20Asociaciones%20Vecinales%20de%20La%20Rioja!5e0!3m2!1ses!2ses!4v1711101594203!5m2!1ses!2ses"
               width="100%"
               height="100%"
               style={{ border: 0 }}

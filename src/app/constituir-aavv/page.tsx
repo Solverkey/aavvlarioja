@@ -84,10 +84,15 @@ export default function ConstituirAAVV() {
                 Plantilla de estatutos para la constitución de la asociación
                 vecinal.
               </p>
-              <button className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:underline">
+              <a
+                href="/documents/MODELO-ESTATUTOS-AA.VV.doc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:underline"
+              >
                 <Download size={16} />
                 Descargar documento
-              </button>
+              </a>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-border hover:shadow-lg transition-shadow group">
               <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
@@ -99,10 +104,15 @@ export default function ConstituirAAVV() {
               <p className="text-sm text-text-muted mb-4">
                 Documento del acta fundacional necesario para la constitución.
               </p>
-              <button className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:underline">
+              <a
+                href="/documents/MODELO-DE-ACTA-FUNDACIONAL.doc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:underline"
+              >
                 <Download size={16} />
                 Descargar documento
-              </button>
+              </a>
             </div>
           </div>
         </div>
