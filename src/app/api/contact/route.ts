@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: "Formulario Web AAVV <onboarding@resend.dev>",
+      from: "Federación AAVV La Rioja <noreply@aavvlarioja.org>",
       to: TO_EMAIL,
       replyTo: email,
       subject: `[Web] ${subject}`,
