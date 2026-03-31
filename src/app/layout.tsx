@@ -15,8 +15,14 @@ export const metadata: Metadata = {
   description:
     "Desde 1989 defendiendo y mejorando los intereses generales de la vecindad, actuando como intermediaria con las administraciones públicas y privadas.",
   icons: {
-    icon: "/images/favicon.png",
-    apple: "/images/webclip.png",
+    icon: [
+      { url: "/images/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/images/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
